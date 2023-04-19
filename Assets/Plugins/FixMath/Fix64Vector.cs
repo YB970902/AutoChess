@@ -108,9 +108,9 @@ namespace FixMath.NET
                 lhs._x * rhs._y - lhs._y * rhs._x);
         }
 
-        public Vector3 ToVector3()
+        public static implicit operator Vector3(FixVector3 vec)
         {
-            return new Vector3((float)_x, (float)_y, (float)_z);
+            return new Vector3((float)vec.x, (float)vec.y, (float)vec.z);
         }
     }
 }
