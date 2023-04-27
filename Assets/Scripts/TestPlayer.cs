@@ -8,7 +8,7 @@ public class TestPlayer : MonoBehaviour
 
     private void Start()
     {
-        treeController.Initialize();
+        treeController.Initialize(null);
     }
 
     private void FixedUpdate()

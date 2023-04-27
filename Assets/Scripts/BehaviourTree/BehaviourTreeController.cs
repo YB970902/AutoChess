@@ -1,3 +1,4 @@
+using Battle;
 using UnityEngine;
 
 namespace BehaviourTree
@@ -10,6 +11,12 @@ namespace BehaviourTree
         /// <summary> 현재 평가중인 노드 </summary>
         private NodeBase curNode;
 
+        /// <summary>
+        /// 행동트리의 대상인 캐릭터
+        /// </summary>
+        private BoCharacter boCharacter;
+        public BoCharacter BoCharacter => boCharacter;
+
         /// <summary> 최상위 노드 </summary>
         [SerializeField] RootNode root = null;
 
@@ -17,8 +24,10 @@ namespace BehaviourTree
         /// 초기화 함수.
         /// 루트에서부터 초기화를 진행한다.
         /// </summary>
-        public void Initialize()
+        public void Initialize(BoCharacter _boCharacter)
         {
+            boCharacter = _boCharacter;
+            
             curNode = root;
             root.Initialize(null, this);
             root.Evaluation();
