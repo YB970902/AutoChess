@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace BehaviourTree
 {
     /// <summary>
-    /// 자식 컴포넌트 
+    /// 여러개의 자식이 있는 Node
     /// </summary>
     public abstract class ControlFlowNode : NodeBase
     {
