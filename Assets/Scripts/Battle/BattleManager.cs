@@ -63,5 +63,7 @@ namespace Battle
 
             return GetEnemyCharacters().FindAll(_ => _.FieldIndex > 0).ToList();
         }
+
+        public override void OnStart() { }
     }
 }
